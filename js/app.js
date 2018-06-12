@@ -1,15 +1,19 @@
 'use strict';
 
+var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+
 var firstAndPike = {
   cookiesPurchased: [],
   minCustPerHr:23,
   maxCustPerHr:65,
   avgCookiePerCust: 6.3,
   totalCookies: 0,
+
   randomCustPerHr: function() { 
     // this formula for a random inclusive range was found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
     return Math.floor(Math.random() * (this.maxCustPerHr - this.minCustPerHr + 1)) + this.minCustPerHr; //The maximum is inclusive and the minimum is inclusive 
   },
+
   calculateDailyCookies: function() {
     var hour = 6;
     var flagAMPM = 'AM';
@@ -40,6 +44,22 @@ var firstAndPike = {
     }
     console.log('Total: ' + Math.floor(this.totalCookies) + ' cookies');
   },
+
+  displayList: function() {
+    this.calculateDailyCookies();
+    var ulEl = document.getElementById('firstPike');
+    for(var i = 0; i < this.cookiesPurchased.length; i++) { 
+      // 1. create li elements
+      var liEl = document.createElement('li');
+      // 2. give them content
+      liEl.textContent = storeHours[i] + ': ' + this.cookiesPurchased[i] + ' cookies';
+      // 3. append to the DOM
+      ulEl.appendChild(liEl);
+    }
+    liEl.textContent = 'Total: ' + this.totalCookies + 'cookies';
+    // 3. append to the DOM
+    ulEl.appendChild(liEl);
+  }
 };
 
 var seaTacAirport = {
@@ -210,9 +230,8 @@ var alki = {
   },
 };
 
-
-firstAndPike.calculateDailyCookies();
-seaTacAirport.calculateDailyCookies();
-seattleCenter.calculateDailyCookies();
-capitolHill.calculateDailyCookies();
-alki.calculateDailyCookies();
+firstAndPike.displayList();
+// seaTacAirport.calculateDailyCookies();
+// seattleCenter.calculateDailyCookies();
+// capitolHill.calculateDailyCookies();
+// alki.calculateDailyCookies();
