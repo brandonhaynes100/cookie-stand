@@ -1,4 +1,4 @@
-# salmon-cookie-business
+# cookie-stand
 Calculate sales projections and create a public-facing page
 
 The following was created with a README.md template from:
