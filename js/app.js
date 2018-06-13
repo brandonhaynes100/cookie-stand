@@ -71,7 +71,7 @@ var renderHeaderRow = function() {
 
   // add a heading for tracking totals to the end of the row
   var totalsCell = document.createElement('th');
-  totalsCell.textContent = 'Total Cookies';
+  totalsCell.textContent = 'Daily Location Total';
   headerRow.appendChild(totalsCell);
 };
 
@@ -108,6 +108,52 @@ StoreLocation.prototype.renderBodyRow = function() {
   bodyRow.appendChild(totalsCell);
 };
 
+var renderFooterRow = function() {
+  
+  // store table element in variable
+  var tableEl = document.getElementById('cookieSalesTable');
+
+  // tr1 - create table row element for table
+  var footerRow = document.createElement('tr');
+
+  // tr2 - append table row element to table element
+  tableEl.appendChild(footerRow);
+
+  // create row header for totals
+  var totalsHeading = document.createElement('th');
+  totalsHeading.textContent = 'Hourly All-Store Totals';
+  footerRow.appendChild(totalsHeading);
+
+  // variable for holding the day's cookie sales across all stores
+  var dailyTotal = 0;
+
+  // loop through each hour to gather hourly totals
+  for(var i = 0; i < storeHours.length; i++) {
+
+    // variable for storing the hour's totals
+    var hourlyTotal = 0;
+
+    // loop through each store to gether its totals for that hour    
+    for(var j = 0; j < storeLocationArray.length; j++) {
+      hourlyTotal += storeLocationArray[j].cookiesSoldArray[i];
+    }
+
+    // add this hour's totals to the daily total
+    dailyTotal += hourlyTotal;
+    // th1 - create table data element to hold hourlyTotal
+    var hourlyTotalEl = document.createElement('td');
+    // th2 - add the hourlyTotal to the row
+    hourlyTotalEl.textContent = hourlyTotal;
+    // th3 - append to the DOM
+    footerRow.appendChild(hourlyTotalEl);
+  }
+
+  // add a total to the end for the whole day across all stores
+  var totalAllLocationsEl = document.createElement('td');
+  totalAllLocationsEl.textContent = dailyTotal;
+  footerRow.appendChild(totalAllLocationsEl);
+};
+
 // renders the header and the body
 var renderTable = function(storeLocationArray) {
   
@@ -122,6 +168,8 @@ var renderTable = function(storeLocationArray) {
     // use the object's data to render the table's body rows
     storeLocationArray[i].renderBodyRow();
   }
+
+  renderFooterRow();
 };
 
 // create all StoreLocation objects
