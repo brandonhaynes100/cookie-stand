@@ -1,218 +1,192 @@
 'use strict';
 
-var firstAndPike = {
-  cookiesPurchased: [],
-  minCustPerHr:23,
-  maxCustPerHr:65,
-  avgCookiePerCust: 6.3,
-  totalCookies: 0,
-  randomCustPerHr: function() { 
-    // this formula for a random inclusive range was found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-    return Math.floor(Math.random() * (this.maxCustPerHr - this.minCustPerHr + 1)) + this.minCustPerHr; //The maximum is inclusive and the minimum is inclusive 
-  },
-  calculateDailyCookies: function() {
-    var hour = 6;
-    var flagAMPM = 'AM';
-    for(var i = 0; i < 15; i++) {
+var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
-      var customersThisHour = this.randomCustPerHr();
-      var cookiesThisHour = Math.floor(customersThisHour * this.avgCookiePerCust);
-      this.cookiesPurchased.push(cookiesThisHour);
+// constructor for building store locations
+function StoreLocation(name, minCustPerHr, maxCustPerHr, avgCookiePerCust) {
+  // for identifying the object by name
+  this.name = name;
+  // minimum customers servered per hour
+  this.minCustPerHr = minCustPerHr;
+  // maximum customers servered per hour
+  this.maxCustPerHr = maxCustPerHr;
+  // average number of cookies sold to each
+  this.avgCookiePerCust = avgCookiePerCust;
+  // tracks each hour's cookies purchased
+  // array to store the cookies sold
+  this.cookiesSoldArray = [];
+  // variable for storing and returning all the cookies sold today
+  this.cookiesToday = 0;
+}
 
-      if(flagAMPM === 'AM') {
-        console.log(hour + 'am: ' + cookiesThisHour + ' cookies');
-        hour += 1;
-        if(hour === 12){
-          flagAMPM = 'PM';
-        }
-      }
-      if(flagAMPM === 'PM') {
-        console.log(hour + 'pm: ' + cookiesThisHour + ' cookies');
-        if(hour === 12) {
-          hour = 1;
-        } else {
-          hour += 1;
-        }
-      }
-    }
-    for(i = 0; i < this.cookiesPurchased.length; i++) {
-      this.totalCookies += this.cookiesPurchased[i];
-    }
-    console.log('Total: ' + Math.floor(this.totalCookies) + ' cookies');
-  },
+// generates a random number of customers within the objects min/max range
+StoreLocation.prototype.randomCustPerHr = function() {
+  // this formula for a random inclusive range was found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+  return Math.floor(Math.random() * (this.maxCustPerHr - this.minCustPerHr + 1)) + this.minCustPerHr; //The maximum is inclusive and the minimum is inclusive
 };
 
-var seaTacAirport = {
-  cookiesPurchased: [],
-  minCustPerHr:3,
-  maxCustPerHr:24,
-  avgCookiePerCust: 1.2,
-  totalCookies: 0,
-  randomCustPerHr: function() { 
-    // this formula for a random inclusive range was found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-    return Math.floor(Math.random() * (this.maxCustPerHr - this.minCustPerHr + 1)) + this.minCustPerHr; //The maximum is inclusive and the minimum is inclusive 
-  },
-  calculateDailyCookies: function() {
-    var hour = 6;
-    var flagAMPM = 'AM';
-    for(var i = 0; i < 15; i++) {
-
-      var customersThisHour = this.randomCustPerHr();
-      var cookiesThisHour = Math.floor(customersThisHour * this.avgCookiePerCust);
-      this.cookiesPurchased.push(cookiesThisHour);
-
-      if(flagAMPM === 'AM') {
-        console.log(hour + 'am: ' + cookiesThisHour + ' cookies');
-        hour += 1;
-        if(hour === 12){
-          flagAMPM = 'PM';
-        }
-      }
-      if(flagAMPM === 'PM') {
-        console.log(hour + 'pm: ' + cookiesThisHour + ' cookies');
-        if(hour === 12) {
-          hour = 1;
-        } else {
-          hour += 1;
-        }
-      }
-    }
-    for(i = 0; i < this.cookiesPurchased.length; i++) {
-      this.totalCookies += this.cookiesPurchased[i];
-    }
-    console.log('Total: ' + Math.floor(this.totalCookies) + ' cookies');
-  },
+// calculates cookies sold per hour to a random number of customers
+StoreLocation.prototype.calculateDailyCookies = function() {
+  // for every hour, calculate how many cookies were sold
+  for(var i = 0; i < storeHours.length; i++) {
+    // create a random number of customers within the object's bounds
+    var customersThisHour = this.randomCustPerHr();
+    // multiply this object's average cookies per customer by randomly
+    // generated number of customers for this hour to get the amount
+    // of cookies sold this hour
+    var cookiesThisHour = Math.floor(customersThisHour * this.avgCookiePerCust);
+    // track the cookies sold for each hour
+    this.cookiesSoldArray.push(cookiesThisHour);
+  }
+  // add up cookies sold for all hours and store in this.cookiesToday
+  for(i = 0; i < this.cookiesSoldArray.length; i++) {
+    this.cookiesToday += this.cookiesSoldArray[i];
+  }
 };
 
-var seattleCenter = {
-  cookiesPurchased: [],
-  minCustPerHr:11,
-  maxCustPerHr:38,
-  avgCookiePerCust: 3.7,
-  totalCookies: 0,
-  randomCustPerHr: function() { 
-    // this formula for a random inclusive range was found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-    return Math.floor(Math.random() * (this.maxCustPerHr - this.minCustPerHr + 1)) + this.minCustPerHr; //The maximum is inclusive and the minimum is inclusive 
-  },
-  calculateDailyCookies: function() {
-    var hour = 6;
-    var flagAMPM = 'AM';
-    for(var i = 0; i < 15; i++) {
+// renders the header row for the table
+var renderHeaderRow = function() {
 
-      var customersThisHour = this.randomCustPerHr();
-      var cookiesThisHour = Math.floor(customersThisHour * this.avgCookiePerCust);
-      this.cookiesPurchased.push(cookiesThisHour);
+  // store table element in variable
+  var tableEl = document.getElementById('cookieSalesTable');
 
-      if(flagAMPM === 'AM') {
-        console.log(hour + 'am: ' + cookiesThisHour + ' cookies');
-        hour += 1;
-        if(hour === 12){
-          flagAMPM = 'PM';
-        }
-      }
-      if(flagAMPM === 'PM') {
-        console.log(hour + 'pm: ' + cookiesThisHour + ' cookies');
-        if(hour === 12) {
-          hour = 1;
-        } else {
-          hour += 1;
-        }
-      }
-    }
-    for(i = 0; i < this.cookiesPurchased.length; i++) {
-      this.totalCookies += this.cookiesPurchased[i];
-    }
-    console.log('Total: ' + Math.floor(this.totalCookies) + ' cookies');
-  },
+  // tr1 - create table row element for table
+  var headerRow = document.createElement('tr');
+
+  // tr2 - append table row element to table element
+  tableEl.appendChild(headerRow);
+
+  // create blank table data element to occupy top left cell of table
+  var blankCell = document.createElement('th');
+  headerRow.appendChild(blankCell);
+
+  for(var i = 0; i < storeHours.length; i++) {
+    // th1 - create table heading element
+    var headingEl = document.createElement('th');
+    // th2 - label the headings
+    headingEl.textContent = storeHours[i];
+    // th3 - append to the DOM
+    headerRow.appendChild(headingEl);
+  }
+
+  // add a heading for tracking totals to the end of the row
+  var totalsCell = document.createElement('th');
+  totalsCell.textContent = 'Daily Location Total';
+  headerRow.appendChild(totalsCell);
 };
 
-var capitolHill = {
-  cookiesPurchased: [],
-  minCustPerHr:20,
-  maxCustPerHr:38,
-  avgCookiePerCust: 2.3,
-  totalCookies: 0,
-  randomCustPerHr: function() { 
-    // this formula for a random inclusive range was found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-    return Math.floor(Math.random() * (this.maxCustPerHr - this.minCustPerHr + 1)) + this.minCustPerHr; //The maximum is inclusive and the minimum is inclusive 
-  },
-  calculateDailyCookies: function() {
-    var hour = 6;
-    var flagAMPM = 'AM';
-    for(var i = 0; i < 15; i++) {
+// renders the body row for the table
+StoreLocation.prototype.renderBodyRow = function() {
 
-      var customersThisHour = this.randomCustPerHr();
-      var cookiesThisHour = Math.floor(customersThisHour * this.avgCookiePerCust);
-      this.cookiesPurchased.push(cookiesThisHour);
+  // store table element in variable
+  var tableEl = document.getElementById('cookieSalesTable');
 
-      if(flagAMPM === 'AM') {
-        console.log(hour + 'am: ' + cookiesThisHour + ' cookies');
-        hour += 1;
-        if(hour === 12){
-          flagAMPM = 'PM';
-        }
-      }
-      if(flagAMPM === 'PM') {
-        console.log(hour + 'pm: ' + cookiesThisHour + ' cookies');
-        if(hour === 12) {
-          hour = 1;
-        } else {
-          hour += 1;
-        }
-      }
-    }
-    for(i = 0; i < this.cookiesPurchased.length; i++) {
-      this.totalCookies += this.cookiesPurchased[i];
-    }
-    console.log('Total: ' + Math.floor(this.totalCookies) + ' cookies');
-  },
+  // tr1 - create table row element for table
+  var bodyRow = document.createElement('tr');
+
+  // append a row heading to the start of the row
+  var rowHeading = document.createElement('th');
+  rowHeading.textContent = this.name;
+  bodyRow.appendChild(rowHeading);
+
+  // tr2 - append table row element to table element
+  tableEl.appendChild(bodyRow);
+
+  // loop through the cookies sold array to log each hour's cookie sales
+  for(var i = 0; i < this.cookiesSoldArray.length; i++) {
+    // th1 - create table data element
+    var headingEl = document.createElement('td');
+    // th2 - insert the data
+    headingEl.textContent = this.cookiesSoldArray[i];
+    // th3 - append to the DOM
+    bodyRow.appendChild(headingEl);
+  }
+
+  // add a heading for tracking totals to the end
+  var totalsCell = document.createElement('td');
+  totalsCell.textContent = this.cookiesToday;
+  bodyRow.appendChild(totalsCell);
 };
 
-var alki = {
-  cookiesPurchased: [],
-  minCustPerHr:2,
-  maxCustPerHr:16,
-  avgCookiePerCust: 4.6,
-  totalCookies: 0,
-  randomCustPerHr: function() { 
-    // this formula for a random inclusive range was found here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-    return Math.floor(Math.random() * (this.maxCustPerHr - this.minCustPerHr + 1)) + this.minCustPerHr; //The maximum is inclusive and the minimum is inclusive 
-  },
-  calculateDailyCookies: function() {
-    var hour = 6;
-    var flagAMPM = 'AM';
-    for(var i = 0; i < 15; i++) {
+var renderFooterRow = function() {
+  
+  // store table element in variable
+  var tableEl = document.getElementById('cookieSalesTable');
 
-      var customersThisHour = this.randomCustPerHr();
-      var cookiesThisHour = Math.floor(customersThisHour * this.avgCookiePerCust);
-      this.cookiesPurchased.push(cookiesThisHour);
+  // tr1 - create table row element for table
+  var footerRow = document.createElement('tr');
 
-      if(flagAMPM === 'AM') {
-        console.log(hour + 'am: ' + cookiesThisHour + ' cookies');
-        hour += 1;
-        if(hour === 12){
-          flagAMPM = 'PM';
-        }
-      }
-      if(flagAMPM === 'PM') {
-        console.log(hour + 'pm: ' + cookiesThisHour + ' cookies');
-        if(hour === 12) {
-          hour = 1;
-        } else {
-          hour += 1;
-        }
-      }
+  // tr2 - append table row element to table element
+  tableEl.appendChild(footerRow);
+
+  // create row header for totals
+  var totalsHeading = document.createElement('th');
+  totalsHeading.textContent = 'Hourly All-Store Totals';
+  footerRow.appendChild(totalsHeading);
+
+  // variable for holding the day's cookie sales across all stores
+  var dailyTotal = 0;
+
+  // loop through each hour to gather hourly totals
+  for(var i = 0; i < storeHours.length; i++) {
+
+    // variable for storing the hour's totals
+    var hourlyTotal = 0;
+
+    // loop through each store to gether its totals for that hour    
+    for(var j = 0; j < storeLocationArray.length; j++) {
+      hourlyTotal += storeLocationArray[j].cookiesSoldArray[i];
     }
-    for(i = 0; i < this.cookiesPurchased.length; i++) {
-      this.totalCookies += this.cookiesPurchased[i];
-    }
-    console.log('Total: ' + Math.floor(this.totalCookies) + ' cookies');
-  },
+
+    // add this hour's totals to the daily total
+    dailyTotal += hourlyTotal;
+    // th1 - create table data element to hold hourlyTotal
+    var hourlyTotalEl = document.createElement('td');
+    // th2 - add the hourlyTotal to the row
+    hourlyTotalEl.textContent = hourlyTotal;
+    // th3 - append to the DOM
+    footerRow.appendChild(hourlyTotalEl);
+  }
+
+  // add a total to the end for the whole day across all stores
+  var totalAllLocationsEl = document.createElement('td');
+  totalAllLocationsEl.textContent = dailyTotal;
+  footerRow.appendChild(totalAllLocationsEl);
 };
 
+// renders the header and the body
+var renderTable = function(storeLocationArray) {
+  
+  // build the heading row
+  renderHeaderRow();
 
-firstAndPike.calculateDailyCookies();
-seaTacAirport.calculateDailyCookies();
-seattleCenter.calculateDailyCookies();
-capitolHill.calculateDailyCookies();
-alki.calculateDailyCookies();
+  // loop through the given array and activate each object's
+  // calculate and render methods
+  for(var i = 0; i < storeLocationArray.length; i++) {
+    // calculate the cookies so the object has data
+    storeLocationArray[i].calculateDailyCookies();
+    // use the object's data to render the table's body rows
+    storeLocationArray[i].renderBodyRow();
+  }
+
+  renderFooterRow();
+};
+
+// create all StoreLocation objects
+var firstAndPike = new StoreLocation('First and Pike', 23, 65, 6.3);
+var seaTacAirport = new StoreLocation('SeaTac Airport', 3, 24, 1.2);
+var seattleCenter = new StoreLocation('Seattle Center', 11, 38, 3.7);
+var capitolHill = new StoreLocation('Capitol Hill', 20, 38, 2.3);
+var alki = new StoreLocation('Alki', 2, 16, 4.6);
+
+// store all StoreLocation objects in an array for looping in renderTable function
+var storeLocationArray = [
+  firstAndPike,
+  seaTacAirport,
+  seattleCenter,
+  capitolHill,
+  alki,
+];
+
+// render a table to include all the objects in the array
+renderTable(storeLocationArray);
