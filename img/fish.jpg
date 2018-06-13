@@ -27,7 +27,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>seattle-201d36/salmon.png at master · codefellows/seattle-201d36</title>
+  <title>seattle-201d36/fish.jpg at master · codefellows/seattle-201d36</title>
     <meta name="description" content="GitHub is where people build software. More than 28 million people use GitHub to discover, fork, and contribute to over 85 million projects.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -37,10 +37,10 @@
     <meta property="og:image" content="https://avatars1.githubusercontent.com/u/3904529?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="codefellows/seattle-201d36" /><meta property="og:url" content="https://github.com/codefellows/seattle-201d36" /><meta property="og:description" content="seattle-201d36 - Lecture repo for Seattle 201d36 with Lead Instructor Allie Grampa" />
 
   <link rel="assets" href="https://assets-cdn.github.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MjgzNjY4NzEzOmI0MjhlYWRkMmE5Y2Y1MDhkNTE5NWExNDc0Mzc3MTc2Y2Q1Njk3MDQ4ZTAyZjRkMjhmYjYwYzJiMmNlZGQ3ZDU=--a988a34f27a69a21db8916efaff45654989585fa">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MjgzNjY4NzEzOjQ0MDdjZDc2NzA4ZDYzZmEwNmMxOGM5NjU4YmIyMTYzY2FkYmU0ODUzZDlkZGRkOTRhYWI0YmQ5NTQyYzRlNDU=--82ec35e298c3e6988c98cad7bb2025b02bda9bd2">
   <meta name="pjax-timeout" content="1000">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="CAD2:4E34:A0823C:F45FCB:5B218C4E" data-pjax-transient>
+  <meta name="request-id" content="CAD2:4E34:A07C54:F457FC:5B218C44" data-pjax-transient>
 
 
   
@@ -52,7 +52,7 @@
   <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
     <meta name="google-analytics" content="UA-3769691-2">
 
-<meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="CAD2:4E34:A0823C:F45FCB:5B218C4E" /><meta name="octolytics-dimension-region_edge" content="sea" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="26805540" /><meta name="octolytics-actor-login" content="brandonhaynes100" /><meta name="octolytics-actor-hash" content="1f2bd2d1534d6cd90135b7b71c7d08370600457aa67d4d6d3b075a5f3e3dafad" />
+<meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="CAD2:4E34:A07C54:F457FC:5B218C44" /><meta name="octolytics-dimension-region_edge" content="sea" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="26805540" /><meta name="octolytics-actor-login" content="brandonhaynes100" /><meta name="octolytics-actor-hash" content="1f2bd2d1534d6cd90135b7b71c7d08370600457aa67d4d6d3b075a5f3e3dafad" />
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
 
@@ -67,9 +67,9 @@
     <meta name="user-login" content="brandonhaynes100">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="YTk4ZGI1MjdiMWE3MmFlZDcwMTc5OTU4YTMyMjMzYjA3ZTA4YmYwNDZiYWM5OTk1NjMxOGYzMDQxNjU5NjY3OHx7InJlbW90ZV9hZGRyZXNzIjoiMjA5LjIxMC4xNTcuMTY1IiwicmVxdWVzdF9pZCI6IkNBRDI6NEUzNDpBMDgyM0M6RjQ1RkNCOjVCMjE4QzRFIiwidGltZXN0YW1wIjoxNTI4OTI1MjY2LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+    <meta name="js-proxy-site-detection-payload" content="N2ZhMTg5NTg1OTA1NjM3M2E3MzYyZjIyZjYxN2VjZmZmZmZhZDY0ZDRlZDcwZDdiMjAyNjcwYWQyNmIwZTgzN3x7InJlbW90ZV9hZGRyZXNzIjoiMjA5LjIxMC4xNTcuMTY1IiwicmVxdWVzdF9pZCI6IkNBRDI6NEUzNDpBMDdDNTQ6RjQ1N0ZDOjVCMjE4QzQ0IiwidGltZXN0YW1wIjoxNTI4OTI1MjU2LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
 
-    <meta name="enabled-features" content="UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES">
+    <meta name="enabled-features" content="LOG_ACCESSIBILITY,UNIVERSE_BANNER,FREE_TRIALS,MARKETPLACE_INSIGHTS,MARKETPLACE_INSIGHTS_CONVERSION_PERCENTAGES">
 
   <meta name="html-safe-nonce" content="7b2c4e19eaf71d7a658ad7fbc4edf1c63b07c71e">
 
@@ -84,7 +84,7 @@
   <meta name="octolytics-dimension-user_id" content="3904529" /><meta name="octolytics-dimension-user_login" content="codefellows" /><meta name="octolytics-dimension-repository_id" content="134593840" /><meta name="octolytics-dimension-repository_nwo" content="codefellows/seattle-201d36" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="134593840" /><meta name="octolytics-dimension-repository_network_root_nwo" content="codefellows/seattle-201d36" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
 
 
-    <link rel="canonical" href="https://github.com/codefellows/seattle-201d36/blob/master/09-css-wireframe-part-1/lab/assets/salmon.png" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/codefellows/seattle-201d36/blob/master/09-css-wireframe-part-1/lab/assets/fish.jpg" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -145,7 +145,7 @@
           aria-label="Search this repository"
           data-unscoped-placeholder="Search or jump to…"
           data-scoped-placeholder="Search or jump to…"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=fBGmUmBnb7RKr90aGm77hZhfOWSLTA2bAX9GVQx68yUzat2SV9gCAIjWI/fuv4Fq6XNtWOtzBVVEAkwLRvAhJA=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=FFJE+7QmkCEFvMF5yAf3DskyYYE1tAlqRZaBs+hXY/hbKT87g5n9lcfFP5Q81o3huB41vVWLAaQA64vtot2x+Q=="
           spellcheck="false"
           autocomplete="off"
           autocapitalize="off"
@@ -309,7 +309,7 @@
           Settings
         </a></li>
 
-        <li><!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="5GjwJ9D2WYj6WTSmgJmL4V40JBeyNCfw2+SWS+sp7ogL5J0hguxAq/Fpmx1P5isZbOvxM/elMvJmKpphrrTj+Q==" />
+        <li><!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="9WOGrMB+QZFGwtTExw9ks7T76nieLFBPU49GMBlF4Nwa7+uqkmRYsk3ye38IcMRLhiQ/XNu9RU3uQUoaXNjtrQ==" />
           <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
             Sign out
           </button>
@@ -321,7 +321,7 @@
 
 
 
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="RdFkHJ9tsLPGZwou83XjnadxD4S5OzKWP5aY+EdY3GaqXQkazXepkM1XpZU8CkNlla7aoPyqJ5SCWJTSAsXRFw==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="3b/tArlCKkXXqkAbr5TFuPkH6rTkz4+nJgcfFJa/HWcyM4AE61gzZtya76Bg62VAy9g/kKFemqWbyRM+0yIQFg==" />
           <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
             Sign out
           </button>
@@ -359,7 +359,7 @@
 
       <ul class="pagehead-actions">
   <li>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-autosubmit="true" data-remote="true" class="js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="2vHRo+RfuywMawQaC1naE8V7ValAf6RN6UrzDtdx4FLyMSYU4m5dVZVJIX0uUumTDqwaOdioOh54gA0qGJsoDA==" />      <input type="hidden" name="repository_id" id="repository_id" value="134593840" class="form-control" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-autosubmit="true" data-remote="true" class="js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="OvBKL29reph6Ir61QpySP1GTKi7H1UqE/UKyI7JGqt0SML2YaVqc4eMAm9Jnl6G/mkRlvl8C1NdsiEwHfaxigw==" />      <input type="hidden" name="repository_id" id="repository_id" value="134593840" class="form-control" />
 
         <div class="select-menu js-menu-container js-select-menu">
           <a href="/codefellows/seattle-201d36/subscription"
@@ -439,7 +439,7 @@
   <li>
     
   <div class="js-toggler-container js-social-container starring-container ">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/codefellows/seattle-201d36/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="5Cfc+B3DzQafANQpl0KzvDOtGXzLwjMQFIxPEH78wGXlC8e4KJ4utKUSJ0MLB4Jc5U7wI8FiSfzUyH6cAiD49A==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/codefellows/seattle-201d36/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="xuGMG3q4Rug84oUgyi02UZHacs6cf1PhRN0+LwQ4grXHzZdbT+WlWgbwdkpWaAexRzmbkZbfKQ2EmQ+jeOS6JA==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -454,7 +454,7 @@
           0
         </a>
 </form>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/codefellows/seattle-201d36/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="w5tnOzp9NS2sHsd+lvSiRd+wGhGfYpULvGs+mvJkaGjCb1VTtgSara2dxri4+nzyQGH/9iVIU0HujnTt/tVL5Q==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/codefellows/seattle-201d36/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="shQZyyeNrwhv5Na1iamAbOG115oYJ9hg0UnwRDIMZ5+z4Cujq/QAiG5n13Onp17bfmQyfaINHiqDrLozPr1EEg==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -473,7 +473,7 @@
   </li>
 
   <li>
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/codefellows/seattle-201d36/fork" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="TEfSBtCuqzW3VTn45J3wKprzN5B0ydNsj2MmqGmnZgyQpiZLHJCONiUIMviVkSqEh+Mu8dq69jO5bufDtk9mew==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/codefellows/seattle-201d36/fork" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="WV+qH5JfSa+SlFHsZBIKUpdFcWx1bKx7retKbcZaeJWFvl5SXmFsrADJWuwVHtD8ilVoDdsfiSSb5osGGbJ44g==" />
             <button
                 type="submit"
                 class="btn btn-sm btn-with-count"
@@ -554,9 +554,9 @@
   <div class="repository-content ">
 
     
-  <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/codefellows/seattle-201d36/blob/e5c6a977b5174eee7ab25d439a0d0885f2410196/09-css-wireframe-part-1/lab/assets/salmon.png">Permalink</a>
+  <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/codefellows/seattle-201d36/blob/e5c6a977b5174eee7ab25d439a0d0885f2410196/09-css-wireframe-part-1/lab/assets/fish.jpg">Permalink</a>
 
-  <!-- blob contrib key: blob_contributors:v21:ae10fda3733ed59ca8813657e660344f -->
+  <!-- blob contrib key: blob_contributors:v21:81fd9070c87cdf6dce0373a4b2718822 -->
 
   <div class="file-navigation">
     
@@ -598,7 +598,7 @@
 
 
             <a class="select-menu-item js-navigation-item js-navigation-open selected"
-               href="/codefellows/seattle-201d36/blob/master/09-css-wireframe-part-1/lab/assets/salmon.png"
+               href="/codefellows/seattle-201d36/blob/master/09-css-wireframe-part-1/lab/assets/fish.jpg"
                data-name="master"
                data-skip-pjax="true"
                rel="nofollow">
@@ -637,7 +637,7 @@
       </clipboard-copy>
     </div>
     <div id="blob-path" class="breadcrumb">
-      <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/codefellows/seattle-201d36"><span>seattle-201d36</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/codefellows/seattle-201d36/tree/master/09-css-wireframe-part-1"><span>09-css-wireframe-part-1</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/codefellows/seattle-201d36/tree/master/09-css-wireframe-part-1/lab"><span>lab</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/codefellows/seattle-201d36/tree/master/09-css-wireframe-part-1/lab/assets"><span>assets</span></a></span><span class="separator">/</span><strong class="final-path">salmon.png</strong>
+      <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/codefellows/seattle-201d36"><span>seattle-201d36</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/codefellows/seattle-201d36/tree/master/09-css-wireframe-part-1"><span>09-css-wireframe-part-1</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/codefellows/seattle-201d36/tree/master/09-css-wireframe-part-1/lab"><span>lab</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/codefellows/seattle-201d36/tree/master/09-css-wireframe-part-1/lab/assets"><span>assets</span></a></span><span class="separator">/</span><strong class="final-path">fish.jpg</strong>
     </div>
   </div>
 
@@ -682,8 +682,8 @@
   <div class="file-actions">
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/codefellows/seattle-201d36/raw/master/09-css-wireframe-part-1/lab/assets/salmon.png">Download</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/codefellows/seattle-201d36/commits/master/09-css-wireframe-part-1/lab/assets/salmon.png">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/codefellows/seattle-201d36/raw/master/09-css-wireframe-part-1/lab/assets/fish.jpg">Download</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/codefellows/seattle-201d36/commits/master/09-css-wireframe-part-1/lab/assets/fish.jpg">History</a>
     </div>
 
         <a class="btn-octicon tooltipped tooltipped-nw"
@@ -693,7 +693,7 @@
             <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
         </a>
 
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/codefellows/seattle-201d36/delete/master/09-css-wireframe-part-1/lab/assets/salmon.png" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="djjUjKA0y6S5+bIvYLuzCyhqO0t0ZjtDIDJz6P08qG+ocJ7yvcWvVANdVnj2/rTsvpVQemctDzOyD2aBlT7Byg==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/codefellows/seattle-201d36/delete/master/09-css-wireframe-part-1/lab/assets/fish.jpg" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="tG/Pe5EK0Hmk3NMXPlwfRb7OSaOLu0mCNsLj8SuQgcRuN6OmObffwQFWQsGIGdN3jLpSxWNjAMIjhQkMap+EZw==" />
           <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
             aria-label="Delete the file in your fork of this project" data-disable-with>
             <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
@@ -701,7 +701,7 @@
 </form>  </div>
 
   <div class="file-info">
-    93.1 KB
+    22.2 KB
   </div>
 </div>
 
@@ -709,7 +709,7 @@
 
   <div itemprop="text" class="blob-wrapper data type-text">
       <div class="image">
-          <span class="border-wrap"><img src="/codefellows/seattle-201d36/blob/master/09-css-wireframe-part-1/lab/assets/salmon.png?raw=true" alt="salmon.png"></span>
+          <span class="border-wrap"><img src="/codefellows/seattle-201d36/blob/master/09-css-wireframe-part-1/lab/assets/fish.jpg?raw=true" alt="fish.jpg"></span>
       </div>
   </div>
 
@@ -736,7 +736,7 @@
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2018 <span title="0.26524s from unicorn-58db8d9996-zm24w">GitHub</span>, Inc.</li>
+      <li class="mr-3">&copy; 2018 <span title="0.36737s from unicorn-5989cbfc98-rtlt5">GitHub</span>, Inc.</li>
         <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3"><a href="https://help.github.com/articles/github-security/" data-ga-click="Footer, go to security, text:security">Security</a></li>
