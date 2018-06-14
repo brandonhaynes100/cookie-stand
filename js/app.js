@@ -1,11 +1,18 @@
 'use strict';
 
+// array for tracking each hour that the stores are open
 var storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
+// array for tracking all storeLocations created so far
+var storeLocationArray = [];
+
+// store table element in global variable
+var cookieTableEl = document.getElementById('cookieSalesTable');
+
 // constructor for building store locations
-function StoreLocation(name, minCustPerHr, maxCustPerHr, avgCookiePerCust) {
-  // for identifying the object by name
-  this.name = name;
+function StoreLocation(location, minCustPerHr, maxCustPerHr, avgCookiePerCust) {
+  // for identifying the object by location
+  this.location = location;
   // minimum customers servered per hour
   this.minCustPerHr = minCustPerHr;
   // maximum customers servered per hour
@@ -17,6 +24,10 @@ function StoreLocation(name, minCustPerHr, maxCustPerHr, avgCookiePerCust) {
   this.cookiesSoldArray = [];
   // variable for storing and returning all the cookies sold today
   this.cookiesToday = 0;
+  // populate cookiesSoldArray and cookiesToday
+  this.calculateDailyCookies();
+  // track this new store in the array
+  storeLocationArray.push(this);
 }
 
 // generates a random number of customers within the objects min/max range
@@ -27,6 +38,8 @@ StoreLocation.prototype.randomCustPerHr = function() {
 
 // calculates cookies sold per hour to a random number of customers
 StoreLocation.prototype.calculateDailyCookies = function() {
+  // empty out the coookiesSoldArray for re-rendering
+  this.cookiesSoldArray = [];
   // for every hour, calculate how many cookies were sold
   for(var i = 0; i < storeHours.length; i++) {
     // create a random number of customers within the object's bounds
@@ -45,16 +58,13 @@ StoreLocation.prototype.calculateDailyCookies = function() {
 };
 
 // renders the header row for the table
-var renderHeaderRow = function() {
-
-  // store table element in variable
-  var tableEl = document.getElementById('cookieSalesTable');
+StoreLocation.renderHeaderRow = function() {
 
   // tr1 - create table row element for table
   var headerRow = document.createElement('tr');
 
   // tr2 - append table row element to table element
-  tableEl.appendChild(headerRow);
+  cookieTableEl.appendChild(headerRow);
 
   // create blank table data element to occupy top left cell of table
   var blankCell = document.createElement('th');
@@ -78,19 +88,16 @@ var renderHeaderRow = function() {
 // renders the body row for the table
 StoreLocation.prototype.renderBodyRow = function() {
 
-  // store table element in variable
-  var tableEl = document.getElementById('cookieSalesTable');
-
   // tr1 - create table row element for table
   var bodyRow = document.createElement('tr');
 
   // append a row heading to the start of the row
   var rowHeading = document.createElement('th');
-  rowHeading.textContent = this.name;
+  rowHeading.textContent = this.location;
   bodyRow.appendChild(rowHeading);
 
   // tr2 - append table row element to table element
-  tableEl.appendChild(bodyRow);
+  cookieTableEl.appendChild(bodyRow);
 
   // loop through the cookies sold array to log each hour's cookie sales
   for(var i = 0; i < this.cookiesSoldArray.length; i++) {
@@ -108,16 +115,13 @@ StoreLocation.prototype.renderBodyRow = function() {
   bodyRow.appendChild(totalsCell);
 };
 
-var renderFooterRow = function() {
-  
-  // store table element in variable
-  var tableEl = document.getElementById('cookieSalesTable');
+StoreLocation.renderFooterRow = function() {
 
   // tr1 - create table row element for table
   var footerRow = document.createElement('tr');
 
   // tr2 - append table row element to table element
-  tableEl.appendChild(footerRow);
+  cookieTableEl.appendChild(footerRow);
 
   // create row header for totals
   var totalsHeading = document.createElement('th');
@@ -133,7 +137,7 @@ var renderFooterRow = function() {
     // variable for storing the hour's totals
     var hourlyTotal = 0;
 
-    // loop through each store to gether its totals for that hour    
+    // loop through each store to gether its totals for that hour
     for(var j = 0; j < storeLocationArray.length; j++) {
       hourlyTotal += storeLocationArray[j].cookiesSoldArray[i];
     }
@@ -155,38 +159,58 @@ var renderFooterRow = function() {
 };
 
 // renders the header and the body
-var renderTable = function(storeLocationArray) {
-  
+StoreLocation.renderTable = function() {
   // build the heading row
-  renderHeaderRow();
+  StoreLocation.renderHeaderRow();
 
   // loop through the given array and activate each object's
   // calculate and render methods
   for(var i = 0; i < storeLocationArray.length; i++) {
     // calculate the cookies so the object has data
-    storeLocationArray[i].calculateDailyCookies();
+    // storeLocationArray[i].calculateDailyCookies();
     // use the object's data to render the table's body rows
     storeLocationArray[i].renderBodyRow();
   }
 
-  renderFooterRow();
+  StoreLocation.renderFooterRow();
 };
 
-// create all StoreLocation objects
-var firstAndPike = new StoreLocation('First and Pike', 23, 65, 6.3);
-var seaTacAirport = new StoreLocation('SeaTac Airport', 3, 24, 1.2);
-var seattleCenter = new StoreLocation('Seattle Center', 11, 38, 3.7);
-var capitolHill = new StoreLocation('Capitol Hill', 20, 38, 2.3);
-var alki = new StoreLocation('Alki', 2, 16, 4.6);
+// variable for accessing the form
+var newLocationForm = document.getElementById('new-location-form');
 
-// store all StoreLocation objects in an array for looping in renderTable function
-var storeLocationArray = [
-  firstAndPike,
-  seaTacAirport,
-  seattleCenter,
-  capitolHill,
-  alki,
-];
+// called when form submitted
+StoreLocation.addNewLocation = function(event) {
+  // override browser default such that the page will not refresh on form submit
+  event.preventDefault();
+  // gather the form input
+  var newLocation = event.target.location.value;
+  var newMinCustPerHr = parseInt(event.target.minCustPerHr.value);
+  var newMaxCustPerHr = parseInt(event.target.maxCustPerHr.value);
+  var newAvgCookiePerCust = parseInt(event.target.avgCookiePerCust.value);
+  // use gathered data to create a new StoreLocation object
+  new StoreLocation(newLocation, newMinCustPerHr, newMaxCustPerHr, newAvgCookiePerCust);
+
+  // clear the contents of the table, then re-render
+  cookieTableEl.textContent = '';
+  StoreLocation.renderTable();
+};
+
+// adds an event listener to the form
+newLocationForm.addEventListener('submit', StoreLocation.addNewLocation);
+
+// create all StoreLocation objects
+// var firstAndPike =
+new StoreLocation('First and Pike', 23, 65, 6.3);
+// var seaTacAirport =
+new StoreLocation('SeaTac Airport', 3, 24, 1.2);
+// var seattleCenter =
+new StoreLocation('Seattle Center', 11, 38, 3.7);
+// var capitolHill =
+new StoreLocation('Capitol Hill', 20, 38, 2.3);
+// var alki =
+new StoreLocation('Alki', 2, 16, 4.6);
+
+
 
 // render a table to include all the objects in the array
-renderTable(storeLocationArray);
+StoreLocation.renderTable();
