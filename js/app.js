@@ -81,7 +81,7 @@ StoreLocation.renderHeaderRow = function() {
 
   // add a heading for tracking totals to the end of the row
   var totalsCell = document.createElement('th');
-  totalsCell.textContent = 'Daily Location Total';
+  totalsCell.textContent = 'Daily Total';
   headerRow.appendChild(totalsCell);
 };
 
@@ -125,7 +125,7 @@ StoreLocation.renderFooterRow = function() {
 
   // create row header for totals
   var totalsHeading = document.createElement('th');
-  totalsHeading.textContent = 'Hourly All-Store Totals';
+  totalsHeading.textContent = 'All-Store Totals';
   footerRow.appendChild(totalsHeading);
 
   // variable for holding the day's cookie sales across all stores
@@ -162,12 +162,9 @@ StoreLocation.renderFooterRow = function() {
 StoreLocation.renderTable = function() {
   // build the heading row
   StoreLocation.renderHeaderRow();
-
   // loop through the given array and activate each object's
   // calculate and render methods
   for(var i = 0; i < storeLocationArray.length; i++) {
-    // calculate the cookies so the object has data
-    // storeLocationArray[i].calculateDailyCookies();
     // use the object's data to render the table's body rows
     storeLocationArray[i].renderBodyRow();
   }
@@ -202,7 +199,7 @@ newLocationForm.addEventListener('submit', StoreLocation.addNewLocation);
 // var firstAndPike =
 new StoreLocation('First and Pike', 23, 65, 6.3);
 // var seaTacAirport =
-new StoreLocation('SeaTac Airport', 3, 24, 1.2);
+new StoreLocation('SeaTac', 3, 24, 1.2);
 // var seattleCenter =
 new StoreLocation('Seattle Center', 11, 38, 3.7);
 // var capitolHill =

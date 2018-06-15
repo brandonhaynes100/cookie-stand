@@ -1,4 +1,4 @@
-
+/* general */
 body {
 	font-family: Arial, Helvetica, sans-serif;
 	background:#ceffc1;
@@ -9,14 +9,33 @@ h2 {
 	margin-bottom: 20px;
 }
 
+a {
+	color: #ffc0cb;
+}
+
 p:last-child {
 	margin-bottom: 20px;
 }
+
 header {
   background: #698061;
   height: 140px;
 }
 
+main {
+  width: 960px;
+	margin: 30px auto;
+}
+
+footer {
+  height: 400px;
+  background: #698061;
+	clear: left;
+}
+
+/* end general */
+
+/* header-inner */
 .header-inner {
   width: 960px;
 	margin: 0 auto;
@@ -26,10 +45,6 @@ header {
   float: left;
   margin: 30px auto;
 	box-sizing: border-box;
-}
-
-a{
-	color: #ffc0cb;
 }
 
 .header-inner li {
@@ -43,17 +58,12 @@ a{
 .header-inner li:last-child {
 	margin-right: 20px;
 }
+/* end header-inner */
 
-main {
-  width: 960px;
-	margin: 0 auto;
-}
-
+/* main */
 main li {
   float: left;
-  margin-right: 0px;
-  margin-top: 20px;
-	margin-bottom: 20px;
+  margin: 10px 10px;
 }
 
 main li:last-child {
@@ -64,7 +74,6 @@ main section {
 	float: left;
 	margin: 0 auto;
 }
-
 
 main section img {
   float: left;
@@ -86,29 +95,47 @@ main section h2 {
 main section p {
   line-height: 20px;
 }
+/* end main */
 
-footer {
-  height: 400px;
-  background: #698061;
-	clear: left;
-
-}
-
+/* footer */
 footer h2 {
 	font-size: 20px;
-
 }
 
 footer ul{
 	width: 960px;
   margin: 0 auto;
 }
+/* end footer */
 
+/* form */
+form {
+	margin: 20px auto;
+}
+
+legend  {
+	block-size: auto;
+	font-weight: bold;
+}
+
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
+}
+/* end form */
+
+/* table */
 td {
   text-align: center;
-  font-style: bold;
+	margin: 5px 5px;
 }
 
 th {
-  font-size: 120%;
+	font-weight: bold;
+	font-size: 120%;
+	padding: 2px 4px;
 }
+/* end table */
