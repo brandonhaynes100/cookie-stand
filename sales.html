@@ -32,6 +32,28 @@
 
     <main>
       <table id="cookieSalesTable"></table>
+
+       <form id="new-location-form">
+        <fieldset>
+
+          <legend>Add A New Location</legend>
+          
+          <label for="location">New Location:</label>
+          <input name="location" type="text" required>
+
+          <label for="minCustPerHr">Minimum Customers Per Hour:</label>
+          <input name="minCustPerHr" type="text" required pattern="[0-9]*">
+          
+          <label for="maxCustPerHr">Maximum Customers Per Hour:</label>
+          <input name="maxCustPerHr" type="text" required pattern="[0-9]*">
+
+          <label for="avgCookiePerCust">Average Cookes Per Customer:</label>
+          <input name="avgCookiePerCust" type="text" required pattern="[0-9]*">
+          
+          <button>Add To Table</button>
+
+        </fieldset>
+      </form>
     </main>
 
     <footer>
