@@ -6,11 +6,16 @@ body {
 
 h2 {
 	font-size: 40px;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 }
 
 a {
 	color: #ffc0cb;
+	transition: color 350ms;
+}
+
+a:hover {
+	color: #bfa8fd8f;
 }
 
 p:last-child {
@@ -63,7 +68,7 @@ footer {
 /* main */
 main li {
   float: left;
-  margin: 10px 10px;
+	margin: 10px 10px;
 }
 
 main li:last-child {
@@ -88,16 +93,15 @@ main section img:last-child {
 	margin-right: 0px;
 }
 
-main section h2 {
-	margin-bottom: 20px;
-}
-
 main section p {
   line-height: 20px;
 }
 /* end main */
 
 /* footer */
+footer {
+	padding-top: 30px;
+}
 footer h2 {
 	font-size: 20px;
 }
@@ -116,10 +120,20 @@ form {
 legend  {
 	block-size: auto;
 	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+form fieldset label {
+	margin: 5px 5px;
+	display: block;
+}
+
+form fieldset input {
+	margin-bottom: 5px;
 }
 
 input:invalid {
-  border: 2px dashed red;
+	border: 1px dashed red;
 }
 
 input:valid {
