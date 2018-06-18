@@ -158,17 +158,22 @@ StoreLocation.renderFooterRow = function() {
   footerRow.appendChild(totalAllLocationsEl);
 };
 
-// renders the header and the body
-StoreLocation.renderTable = function() {
-  // build the heading row
-  StoreLocation.renderHeaderRow();
+StoreLocation.renderBodyRowAll = function() {
   // loop through the given array and activate each object's
   // calculate and render methods
   for(var i = 0; i < storeLocationArray.length; i++) {
     // use the object's data to render the table's body rows
     storeLocationArray[i].renderBodyRow();
-  }
+  }  
+};
 
+// renders the header and the body
+StoreLocation.renderTable = function() {
+  // render the heading row
+  StoreLocation.renderHeaderRow();
+  // render all body rows
+  StoreLocation.renderBodyRowAll();
+  // render the footer row
   StoreLocation.renderFooterRow();
 };
 
@@ -183,7 +188,7 @@ StoreLocation.addNewLocation = function(event) {
   var newLocation = event.target.location.value;
   var newMinCustPerHr = parseInt(event.target.minCustPerHr.value);
   var newMaxCustPerHr = parseInt(event.target.maxCustPerHr.value);
-  var newAvgCookiePerCust = parseInt(event.target.avgCookiePerCust.value);
+  var newAvgCookiePerCust = parseFloat(event.target.avgCookiePerCust.value);
   // use gathered data to create a new StoreLocation object
   new StoreLocation(newLocation, newMinCustPerHr, newMaxCustPerHr, newAvgCookiePerCust);
 
